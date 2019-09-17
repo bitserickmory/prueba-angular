@@ -1,0 +1,29 @@
+<h1>Clientes</h1>
+
+<h2>Agregar Clientes</h2>
+<form class="formulario" #formulario="ngForm" novalidate (ngSubmit)="guardar(formulario)">
+    <div>
+        <div><label>Nombre Cliente </label></div>
+        <div><input type="text" name="nombre" ngModel required minlength="2"  #nombre="ngModel"></div>
+    </div>
+    <div>
+            <div><label>Dirección Cliente </label></div>
+            <div><input type="text" required minlength="4" name="direccion" ngModel></div>
+    </div>
+    <div>
+            <div><label>Teléfono Cliente </label></div>
+        <div><input type="text" required minlength="6" name="telefono" ngModel></div>
+    </div>
+    <div>
+            <div><label>Número de Cuenta Cliente </label></div>
+            <div><input type="text" required minlength="8" name="numero" ngModel></div>
+    </div>
+    <div>
+            <div><label>Saldo Inicial de Cliente </label></div>
+            <div><input type="text" name="saldo"></div>
+    </div>
+    <div><button type="submit">Guardar</button></div>
+</form>
+
+
+

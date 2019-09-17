@@ -1,0 +1,23 @@
+<h1>Movimientos</h1>
+
+<h2>Agregar Movimiento</h2>
+<form class="formulario" #formulario="ngForm" novalidate (ngSubmit)="guardar(formulario)">
+    <div>
+        <div><label>Nombre Cliente </label></div>
+        <div><input type="text" name="nombre" ngModel required minlength="2"  #nombre="ngModel"></div>
+    </div>
+    <div>
+            <div><label>Tipo de Movimiento </label></div>
+            <input type="radio" name="debito" value="debito" ngModel> Debito<br>
+            <input type="radio" name="credito" value="credito" ngModel> Credito<br>
+    </div>
+    <div>
+            <div><label>Monto </label></div>
+        <div><input type="text" required minlength="6" name="monto" ngModel></div>
+    </div>
+    <div>
+            <div><label>Fecha </label></div>
+            <div><input type="date" required minlength="8" name="fecha" ngModel></div>
+    </div>
+    <div><button type="submit">Guardar Movimiento</button></div>
+</form>

@@ -1,0 +1,22 @@
+<h1>Consultar</h1>
+
+<h2>Buscar Cliente</h2>
+<form class="formulario" #formulario="ngForm" novalidate (ngSubmit)="guardar(formulario)">
+    <div>
+        <div><label>Nombre Cliente </label></div>
+        <div><input type="text" name="nombre" ngModel required minlength="2"  #nombre="ngModel"></div>
+    </div>
+    <div>
+            <div><label>Número de Cuenta Cliente </label></div>
+            <div><input type="text" required minlength="8" name="numero" ngModel></div>
+    </div>
+    <div>
+            <div><label>Desde </label></div>
+            <div><input type="date" required minlength="8" name="desde" ngModel></div>
+    </div>
+    <div>
+            <div><label>Hasta </label></div>
+            <div><input type="date" required minlength="8" name="hasta" ngModel></div>
+    </div>
+    <div><button type="submit">Buscar...</button></div>
+</form>
